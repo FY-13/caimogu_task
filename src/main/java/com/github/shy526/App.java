@@ -76,7 +76,6 @@ public class App {
         userInfo.setMaxGameComment(userInfo.getMaxGameComment() - nowReplyGroup.getOrDefault("3", df).size());
         userInfo.setMaxComment(userInfo.getMaxComment() - nowReplyGroup.getOrDefault("2", df).size());
         log.error("{} 影响力获取渠道 剩余数量 帖子子回复数:{} 游戏评论回复:{} 游戏库评论:{}", current.format(formatter), userInfo.getMaxComment(), userInfo.getMaxGameComment(), userInfo.getMaxGame());
-        CaiMoGuH5Help.scanGameIds();
         if ((userInfo.getMaxComment()+userInfo.getMaxGame()+userInfo.getMaxGameComment()) <= 0) {
             log.error("{} 无可用渠道获取影响力", current.format(formatter));
             return;
